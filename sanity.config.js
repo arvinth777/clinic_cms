@@ -56,6 +56,15 @@ const websiteImagesSchema = {
       },
     },
     {
+      name: 'aboutHeroImage',
+      title: 'About Page Hero Image',
+      type: 'image',
+      description: 'Image for About page hero section',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'clinicLogo',
       title: 'Clinic Logo/Badge',
       type: 'image',
