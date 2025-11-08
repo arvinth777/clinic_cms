@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "@sanity/vision": "^4.14.2",
+    "patch-package": "^8.0.1",
     "react": "^19.1",
     "react-dom": "^19.1",
     "sanity": "^4.14.2",
