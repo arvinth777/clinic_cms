@@ -2,6 +2,8 @@
 
 import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
+import { Analytics } from '@vercel/analytics/react';
+import React from 'react';
 
 // --- 1. Define the 'Doctor Profile' form (for About page) ---
 const doctorSchema = {
@@ -247,5 +249,19 @@ export default defineConfig({
   schema: {
     // Register schemas - Only websiteImages is essential for your use case
     types: [websiteImagesSchema, doctorSchema, pageInfoSchema],
+  },
+
+  // Add Vercel Analytics
+  studio: {
+    components: {
+      layout: (props) => {
+        return React.createElement(
+          React.Fragment,
+          null,
+          props.renderDefault(props),
+          React.createElement(Analytics)
+        )
+      }
+    }
   },
 });
