@@ -65,6 +65,15 @@ const websiteImagesSchema = {
       },
     },
     {
+      name: 'medicalBackgroundImage',
+      title: 'Medical Background Image',
+      type: 'image',
+      description: 'Image for Medical Background section on About page',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'clinicLogo',
       title: 'Clinic Logo/Badge',
       type: 'image',
